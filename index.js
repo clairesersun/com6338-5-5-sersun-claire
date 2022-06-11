@@ -32,12 +32,13 @@ form.onsubmit = function(e) {
         button.addEventListener('click', function() {
 //if it is, The item should be marked done by striking through the words using the text-decoration CSS property
             button.style.textDecoration = "line-through"
-            button.classList.add("done")
+            li.classList.add("done")
         })}
     if (doneToDos){
 //also watch to see if an item that has been marked as done is clicked, if so clicking an item that's been marked as done should remove the item from the list
-        li.remove()
-    }
+    button.addEventListener('click', function() {
+    li.remove()
+    })}
 }
 
 // //watch to see if that added item is clicked
