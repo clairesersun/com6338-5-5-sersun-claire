@@ -28,18 +28,24 @@ form.onsubmit = function(e) {
     //text withing input should appear below the form inside of the ul#todo-list element.
     //create a new button element nested within a li element
     //document.querySelector("li").appendChild(button)
-    if (button) {
-        button.addEventListener('click', function() {
-//if it is, The item should be marked done by striking through the words using the text-decoration CSS property
-            button.style.textDecoration = "line-through"
-            li.classList.add("done")
-        })}
-    if (doneToDos){
+
+    //if the button has the decoration of “line-through” then you remove it on click, else, we will add the line-through whenever the user clicks on it.
+    if (button) { button.addEventListener('click', function() {
+        if (button.style.textDecoration = "line-through") {
+            li.remove()
+        } else {
+                button.style.textDecoration = "line-through"
+            }})}
+    } 
+//     if (button) {
+//         button.addEventListener('click', function() {
+// //if it is, The item should be marked done by striking through the words using the text-decoration CSS property
+//             button.style.textDecoration = "line-through"
+//             li.classList.add("done")
+//         })}
+//     if (doneToDos){
 //also watch to see if an item that has been marked as done is clicked, if so clicking an item that's been marked as done should remove the item from the list
-    button.addEventListener('click', function() {
-    li.remove()
-    })}
-}
+
 
 // //watch to see if that added item is clicked
 // newToDos.onclick = function() {
