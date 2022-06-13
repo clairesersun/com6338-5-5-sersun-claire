@@ -1,6 +1,7 @@
 var form = document.querySelector('form')
 var doneToDos = document.querySelector(".done")
 var input = document.querySelector('#users-toDo')
+var todoList = input.value
 
 //how? by pressing the enter key || clicking the add button
 form.onsubmit = function(e) {
@@ -31,7 +32,7 @@ form.onsubmit = function(e) {
 
     //if the button has the decoration of “line-through” then you remove it on click, else, we will add the line-through whenever the user clicks on it.
     if (button) { button.addEventListener('click', function() {
-        if (button.style.textDecoration = "line-through") {
+        if (button.style.textDecoration == "line-through") {
             li.remove()
         } else {
                 button.style.textDecoration = "line-through"
